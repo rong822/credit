@@ -1,0 +1,60 @@
+{
+  "appenders": {
+    "console": {
+      "type": "console"
+    },
+    "server": {
+      "type": "file",
+      "layout": {
+        "type": "colored"
+      },
+      "filename": "./logs/server/server.log",
+      "maxLogSize": 104800,
+      "backups": 100
+    },
+    "access": {
+      "type": "dateFile",
+      "filename": "./logs/access/access.log",
+      "layout": {
+        "type": "colored"
+      },
+      "pattern": "-yyyy-MM-dd.log",
+      "alwaysIncludePattern": true,
+      "category": "access"
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": [
+        "console"
+      ],
+      "level": "ALL"
+    },
+    "credit": {
+      "appenders": [
+        "server"
+      ],
+      "level": "debug"
+    },
+    "credit_service": {
+      "appenders": [
+        "server"
+      ],
+      "level": "debug"
+    },
+    "app": {
+      "appenders": [
+        "server"
+      ],
+      "level": "debug"
+    },
+    "access": {
+      "appenders": [
+        "access"
+      ],
+      "level": "debug"
+    }
+  },
+  "replaceConsole": true,
+  "pm2": true
+}

@@ -1,0 +1,6 @@
+{
+  "channelName": "mychannel",
+  "chaincodeName": "scf_points",
+  "chaincodeVersion": "v0",
+  "invokeOrgID": "peer0.org1.example.com"
+}
